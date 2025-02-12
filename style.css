@@ -1,0 +1,526 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #266c33;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+/* Header Styles */
+.header {
+    background: #266c33;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure vertical alignment */
+}
+
+.header .logo {
+    /* margin-left: 0px; */
+    display: flex; /* Change inline to flex */
+    justify-content: center;
+    align-items: center; /* Center the logo vertically */
+    flex: 1;
+}
+
+.navigation {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Align navigation items to the right */
+    margin-right: 20px;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex; /* Ensure horizontal alignment of the menu items */
+    margin: 0;
+}
+
+.navigation ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+    color: #f4f4f4;
+}
+
+
+.header-top {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.header-top .madhura-solar {
+    color: #266c33;
+    font-weight: 700;
+}
+
+/* Banner Styles */
+.banner {
+    background: url('../images/banner-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 0px 0;
+    margin-left: 0%;
+    text-align: center;
+    object-fit: cover;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Bring it above other elements */
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Slider Styles */
+/* Ensure the banner-content remains fixed */
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Bring it above other elements */
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Slider Styles - Adjust for automatic horizontal scrolling */
+/* Slider Styles with delay between slides */
+/* Slider Styles with full-page responsiveness */
+#gallery {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height to fill the viewport */
+    overflow: hidden;
+    margin-top: 0; /* Remove any top margin if necessary */
+}
+
+.slides {
+    display: flex;
+    width: 400%; /* Width to accommodate all slides */
+    height: 100%; /* Ensure slides take full height */
+    animation: slide-animation 20s infinite; /* Adjusted animation timing */
+}
+
+@keyframes slide-animation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0; /* Ensure slides don't shrink */
+    height: 100%; /* Ensure slide takes full height */
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area without stretching */
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* #gallery {
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 1s ease;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 1em;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide:not(.active) {
+    opacity: 0;
+} */
+
+/* Content Styles */
+.content {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.welcome, .products, .news {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #266c33;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #266c33;
+}
+
+/* Product Categories Styles */
+.products {
+    text-align: center;
+}
+
+.product-categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.category {
+    flex: 1;
+    margin: 15px;
+    max-width: 250px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #333;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 15px;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ccc;
+}
+
+.flip-card-back ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flip-card-back a {
+    color: white;
+    text-decoration: none;
+}
+
+.flip-card-back a:hover {
+    text-decoration: underline;
+}
+
+/* .product-categories {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-categories .category {
+    width: 45%;
+}
+
+.product-categories ul {
+    list-style: none;
+    text-align: left;
+}
+
+.product-categories ul li {
+    padding: 5px 0;
+}
+
+.product-categories ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.product-categories ul li a:hover {
+    color: #ff6700;
+} */
+
+/* News Section Styles */
+.news {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.news h2 {
+    font-size: 2.5em;
+    color: #004d00; /* Dark Green */
+    margin-bottom: 20px;
+}
+
+.news-articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news article {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 calc(25% - 20px); /* Adjusts article width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news article h3 {
+    font-size: 1.5em;
+    color: #004d00; /* Dark Green */
+    margin-bottom: 10px;
+}
+
+.news article p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.news article a.btn {
+    background-color: #004d00; /* Dark Green */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.news article a.btn:hover {
+    background-color: #009900; /* Bright Green */
+}
+
+/* Footer Section Styles */
+.footer {
+    background-color: #004d00; /* Dark Green */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1 1 calc(33.333% - 20px); /* Adjusts section width */
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #b3e6b0; /* Light Green */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section .social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-section .social-icons a {
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .news-articles {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .navigation ul {
+        display: block;
+    }
+
+    .navigation ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .product-categories {
+        flex-direction: column; /* Stack product categories vertically */
+    }
+
+    .product-categories .category {
+        width: 100%;
+        margin-bottom: 20px; /* Add spacing between categories */
+    }
+}
