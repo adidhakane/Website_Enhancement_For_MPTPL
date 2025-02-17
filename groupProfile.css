@@ -1,0 +1,88 @@
+/* style.css */
+
+/* Reset and Global Styles */
+* {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    color: #000000;
+    /* Black text color */
+    background-color: #ffffff;
+    /* White background */
+    padding: 40px 20px;
+    align-items: center;
+}
+
+/* Container Styling */
+.container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Image Section */
+.image-section {
+    width: 40%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+}
+
+/* Image */
+.image-section img {
+    width: 100%;
+    border-radius: 12px;
+    display: block; /* Remove any extra space */
+    margin: 0 auto; /* Center the image */
+}
+
+
+/* Content Section */
+.content-section {
+    width: 100%;
+}
+
+.content-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2e7d32;
+    /* Green headings */
+    border-bottom: 3px solid #2e7d32;
+    /* Green underline */
+    padding-bottom: 5px;
+}
+
+.content-section p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #000000;
+    /* Black paragraphs */
+}
+
+/* Links (if needed in future) */
+a {
+    color: #2e7d32;
+    /* Green for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1b5e20;
+    /* Darker green on hover */
+    text-decoration: underline;
+}
+
+.img_class{
+    max-width: 100%;
+}
